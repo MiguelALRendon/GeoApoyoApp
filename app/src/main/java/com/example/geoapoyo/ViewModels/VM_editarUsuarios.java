@@ -5,11 +5,11 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 import com.example.geoapoyo.Models.C_usuarios;
 public class VM_editarUsuarios extends ViewModel {
-    private final MutableLiveData<Integer> id_usuario = new MutableLiveData<>();
-    private final MutableLiveData<String> correo = new MutableLiveData<>();
-    private final MutableLiveData<String> password = new MutableLiveData<>();
-    private final MutableLiveData<Integer> id_rol = new MutableLiveData<>();
-    private final MutableLiveData<String> nombre = new MutableLiveData<>();
+    public final MutableLiveData<Integer> id_usuario = new MutableLiveData<>();
+    public final MutableLiveData<String> correo = new MutableLiveData<>();
+    public final MutableLiveData<String> password = new MutableLiveData<>();
+    public final MutableLiveData<Integer> id_rol = new MutableLiveData<>();
+    public final MutableLiveData<String> nombre = new MutableLiveData<>();
     public VM_editarUsuarios(C_usuarios C) {
 //        resetValues();
         start(C);

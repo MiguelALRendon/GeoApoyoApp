@@ -5,8 +5,8 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 public class VM_iniciarSesion extends ViewModel {
-    private final MutableLiveData<String> correo = new MutableLiveData<>();
-    private final MutableLiveData<String> password = new MutableLiveData<>();
+    public final MutableLiveData<String> correo = new MutableLiveData<>();
+    public final MutableLiveData<String> password = new MutableLiveData<>();
 
     public VM_iniciarSesion() {
         resetValues();

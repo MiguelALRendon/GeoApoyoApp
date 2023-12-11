@@ -5,10 +5,10 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 public class VM_agregarUsuarios extends ViewModel {
-    private final MutableLiveData<String> nombre = new MutableLiveData<>();
-    private final MutableLiveData<Integer> id_rol = new MutableLiveData<>();
-    private final MutableLiveData<String> correo = new MutableLiveData<>();
-    private final MutableLiveData<String> password = new MutableLiveData<>();
+    public final MutableLiveData<String> nombre = new MutableLiveData<>();
+    public final MutableLiveData<Integer> id_rol = new MutableLiveData<>();
+    public final MutableLiveData<String> correo = new MutableLiveData<>();
+    public final MutableLiveData<String> password = new MutableLiveData<>();
     public VM_agregarUsuarios() {
         resetValues();
     }
