@@ -1,4 +1,4 @@
-package adapter;
+package com.example.geoapoyo.adapter;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

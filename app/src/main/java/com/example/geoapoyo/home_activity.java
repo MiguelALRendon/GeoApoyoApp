@@ -2,6 +2,9 @@ package com.example.geoapoyo;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import android.graphics.PorterDuff;
@@ -9,7 +12,7 @@ import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
 
-import adapter.VPAdapter;
+import com.example.geoapoyo.adapter.VPAdapter;
 
 public class home_activity extends AppCompatActivity {
 

@@ -11,4 +11,20 @@
     <string name="usuarios_por_visitar">Usuarios por visitar</string>
     <string name="nombre">Nombre</string>
     <string name="universidad">Universidad</string>
+    <string name="visita">Visita</string>
+    <string name="nombre_del_chango">Nombre del chango</string>
+    <string name="universidad_del_chango">universidad del chango</string>
+    <string name="estatus">Estatus</string>
+    <string name="raz_n">Razón</string>
+    <string name="x">X</string>
+    <string name="y">Y</string>
+    <string name="coordenadas">Coordenadas</string>
+    <string name="fecha_y_hora_de_la_visita">Fecha y hora de la visita</string>
+    <string name="fecha_de_la_visita">Fecha de la visita</string>
+    <string name="hora">Hora</string>
+    <string name="nombre_del_visitador">Nombre del Visitador</string>
+    <string name="fotografia_de_la_vivienda">Fotografia de la vivienda</string>
+    <string name="jpg_png_jpeg">.jpg, .png, .jpeg</string>
+    <string name="el_cliente_es_el_mismo_que_el_solicitante">¿El cliente es el mismo que el solicitante?</string>
+    <string name="enviar_datos">Enviar Datos</string>
 </resources>
