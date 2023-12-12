@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import adapter.UsuarioAdapter;
+import com.example.geoapoyo.adapter.UsuarioAdapter;
 
 public class UsuariosFragment extends Fragment {
 

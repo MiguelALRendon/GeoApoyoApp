@@ -1,15 +1,18 @@
-package adapter;
+package com.example.geoapoyo.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.geoapoyo.EditUserActivity;
 import com.example.geoapoyo.R;
 
 import org.w3c.dom.Text;
@@ -34,7 +37,8 @@ public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.ViewHold
         holder.btnDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(context, EditUserActivity.class);
+                context.startActivity(intent);
             }
         });
 
@@ -46,8 +50,8 @@ public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.ViewHold
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        Text txtNombreUsuario;
-        Text txtUniversidad;
+        TextView txtNombreUsuario;
+        TextView txtUniversidad;
         ImageView imgUsuario;
         ImageButton btnDetails;
         public ViewHolder(@NonNull View itemView) {
