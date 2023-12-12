@@ -1,5 +1,7 @@
 package com.example.geoapoyo.InterfacesAPI;
 
+import com.example.geoapoyo.Models.C_mensaje;
+import com.example.geoapoyo.Models.C_mensaje2;
 import com.example.geoapoyo.Models.C_visita;
 import com.example.geoapoyo.Models.ResponseServer.Candidatos.R_CandidatoVisita;
 import com.example.geoapoyo.Models.ResponseServer.Candidatos.R_Candidatos;
@@ -31,39 +33,23 @@ public interface CRUD_Candidatos {
     );
 
     @PUT("api/candidatos/apoyo/{id}")
-    Call<String>UpdateCandidatoStatus(
+    Call<C_mensaje2>UpdateCandidatoStatus(
         @Path("id") int id,
         @Body UpdateStatus id_status
     );
     @POST("api/candidatos")
-    Call<String> InsertCandidatos(@Body VM_agregarCandidato C);
+    Call<C_mensaje> InsertCandidatos(@Body VM_agregarCandidato C);
 
     @POST("api/candidatos/visita/{id}")
-    Call<String> InsertVisita(
+    Call<C_mensaje> InsertVisita(
         @Path("id") int id,
         @Body VM_agregarVisita U
     );
 
     @PUT("api/candidatos/{id}")
-    Call<String>UpdateCandidato(
+    Call<C_mensaje>UpdateCandidato(
         @Path("id") int id,
         @Body VM_agregarCandidato C
     );
-//-----------------------
-//    @POST("api/usuarios")
-//    Call<String> InsertUsuario(@Body VM_agregarUsuarios U);
-//
-//    @PUT("api/usuarios/{id}")
-//    Call<String>UpdateUsuario(
-//        @Path("id") int id,
-//        @Body VM_editarUsuarios U
-//    );
-//    @PUT("usuarios/cambiarPass/{id}")
-//    Call<String>UpdatePassword(@Body UsuarioUpdatePassword P);
-//    @DELETE("api/usuarios/{id}")
-//    Call<String>BORRAR(
-//        @Query("id") int Id,
-//        @Body UsuarioDelete U
-//    );
 
 }
