@@ -1,5 +1,6 @@
 package com.example.geoapoyo.InterfacesAPI;
 
+import com.example.geoapoyo.Models.C_mensaje;
 import com.example.geoapoyo.Models.ResponseServer.Usuario.R_usuarios;
 import com.example.geoapoyo.Models.ResponseServer.Usuario.UsuarioDelete;
 import com.example.geoapoyo.Models.ResponseServer.Usuario.UsuarioUpdatePassword;
@@ -22,16 +23,16 @@ public interface CRUD_Usuarios {
     @GET("api/usuarios")
     Call<R_usuarios> GetUsuarios();
     @POST("api/usuarios")
-    Call<String> InsertUsuario(@Body VM_agregarUsuarios U);
+    Call<C_mensaje> InsertUsuario(@Body VM_agregarUsuarios U);
     @PUT("api/usuarios/{id}")
-    Call<String>UpdateUsuario(
+    Call<C_mensaje>UpdateUsuario(
         @Path("id") int id,
         @Body VM_editarUsuarios U
     );
     @PUT("usuarios/cambiarPass/{id}")
-    Call<String>UpdatePassword(@Body UsuarioUpdatePassword P);
+    Call<C_mensaje>UpdatePassword(@Body UsuarioUpdatePassword P);
     @DELETE("api/usuarios/{id}")
-    Call<String>BORRAR(
+    Call<C_mensaje>BORRAR(
         @Query("id") int Id,
         @Body UsuarioDelete U
     );
