@@ -24,9 +24,12 @@ public class C_candidato {
     public String created_at;
     public String updated_at;
 
+    public double latitud;
+    public double longitud;
+
 //    ----------------------------------------------------------------
 
-    public String pregunta1;
+    public int pregunta1;
     public String pregunta2;
     public String pregunta3;
     public String pregunta4;

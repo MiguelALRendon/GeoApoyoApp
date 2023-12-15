@@ -9,5 +9,5 @@ import retrofit2.http.GET;
 
 public interface Apoyos {
     @GET("api/apoyo") Call<R_Apoyos> GetApoyos();
-    @GET("api/apoyo/estatus") Call<R_ApoyosStatus> GetApoyosStatus();
+        @GET("api/apoyo/estatus") Call<R_ApoyosStatus> GetApoyosStatus();
 }

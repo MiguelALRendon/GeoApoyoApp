@@ -10,7 +10,4 @@ import com.example.geoapoyo.Models.C_usuarios;
 public class R_usuarios{
     public C_usuarios[] lista;
 
-    public R_usuarios(C_usuarios[] lista) {
-        this.lista = lista;
-    }
 }
