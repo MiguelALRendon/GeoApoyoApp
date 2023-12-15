@@ -125,7 +125,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:text="@string/estatus"
-                    app:layout_constraintEnd_toStartOf="@+id/dropDownEstado"
+                    app:layout_constraintEnd_toStartOf="@+id/dropDownRazon"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/crdImage" />
 
@@ -159,7 +159,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/crdImage" />
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/dropDownEstado"
+                    android:id="@+id/dropDownRazon"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -169,7 +169,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView6">
 
                     <AutoCompleteTextView
-                        android:id="@+id/autoCompleteEstado"
+                        android:id="@+id/autoCompleteRazon"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:enabled="false"
@@ -199,6 +199,7 @@
                     android:id="@+id/txtXCordLayout"
                     style="@style/generic_input_style"
                     android:layout_width="0dp"
+                    android:enabled="false"
                     android:layout_height="wrap_content"
                     android:hint="@string/x"
                     app:boxCornerRadiusBottomEnd="5dp"
@@ -231,6 +232,7 @@
                     android:id="@+id/txtYCordLayout"
                     style="@style/generic_input_style"
                     android:layout_width="0dp"
+                    android:enabled="false"
                     android:layout_height="wrap_content"
                     android:hint="@string/y"
                     app:boxCornerRadiusBottomEnd="5dp"
@@ -265,6 +267,7 @@
                     android:id="@+id/txtFechaLayout"
                     style="@style/generic_input_style"
                     android:layout_width="0dp"
+                    android:enabled="false"
                     android:layout_height="wrap_content"
                     android:hint="@string/fecha_de_la_visita"
                     app:boxCornerRadiusBottomEnd="5dp"
@@ -297,6 +300,7 @@
                     android:id="@+id/txtHoraLayout"
                     style="@style/generic_input_style"
                     android:layout_width="0dp"
+                    android:enabled="false"
                     android:layout_height="wrap_content"
                     android:hint="@string/hora"
                     app:boxCornerRadiusBottomEnd="5dp"
@@ -347,7 +351,7 @@
                         android:id="@+id/txtVisitador"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="number" />
+                        android:inputType="textPersonName" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -370,6 +374,7 @@
                     app:boxCornerRadiusBottomEnd="5dp"
                     app:boxCornerRadiusBottomStart="5dp"
                     app:boxCornerRadiusTopEnd="5dp"
+                    android:enabled="false"
                     app:boxCornerRadiusTopStart="5dp"
                     app:boxStrokeColor="@animator/selector"
                     app:boxStrokeWidth="2dp"
@@ -455,7 +460,7 @@
                     app:trackTint="@color/primary" />
 
                 <Button
-                    android:id="@+id/btnLogin"
+                    android:id="@+id/btnSave"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
