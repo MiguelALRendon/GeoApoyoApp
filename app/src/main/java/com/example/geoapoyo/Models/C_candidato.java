@@ -5,7 +5,9 @@ import android.os.Parcelable;
 
 import com.example.geoapoyo.Models.ResponseServer.Candidatos.Pregunta10;
 
-public class C_candidato {
+import java.io.Serializable;
+
+public class C_candidato implements Serializable {
     public int id_candidato;
     public String nombre;
     public int edad;
