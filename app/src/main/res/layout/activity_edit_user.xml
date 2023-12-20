@@ -1,481 +1,490 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".EditUserActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ScrollView
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        tools:context=".EditUserActivity">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/materialToolbar"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?attr/colorPrimary"
-                android:backgroundTint="@color/primary"
-                android:minHeight="?attr/actionBarSize">
+                android:orientation="vertical">
 
-                <LinearLayout
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/materialToolbar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:background="?attr/colorPrimary"
+                    android:backgroundTint="@color/primary"
+                    android:minHeight="?attr/actionBarSize">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/logo_text"
-                        tools:layout_editor_absoluteX="16dp"
-                        tools:layout_editor_absoluteY="32dp" />
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/logo_text"
+                            tools:layout_editor_absoluteX="16dp"
+                            tools:layout_editor_absoluteY="32dp" />
 
 
-                </LinearLayout>
+                    </LinearLayout>
 
-            </com.google.android.material.appbar.MaterialToolbar>
+                </com.google.android.material.appbar.MaterialToolbar>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <ImageButton
-                        android:id="@+id/imageButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="@color/white"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/baseline_chevron_left_24" />
-
-                    <TextView
-                        android:id="@+id/textView3"
-                        style="@style/text_style_subtitle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/visita"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/imageButton"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="8dp">
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/crdImage"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    app:cardCornerRadius="50dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <ImageView
-                        android:id="@+id/imgUsuarioLista"
-                        android:layout_width="match_parent"
-
-                        android:layout_height="match_parent"
-                        app:srcCompat="@drawable/fondo" />
-                </com.google.android.material.card.MaterialCardView>
-
-                <TextView
-                    android:id="@+id/textView4"
-                    style="@style/text_style_subtitle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="@string/nombre_del_chango"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/crdImage"
-                    app:layout_constraintTop_toTopOf="@+id/crdImage" />
-
-                <TextView
-                    android:id="@+id/textView5"
-                    style="@style/text_style_subsubtitle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="@string/universidad_del_chango"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/crdImage"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-                <TextView
-                    android:id="@+id/textView6"
-                    style="@style/text_style_subsubtitle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/estatus"
-                    app:layout_constraintEnd_toStartOf="@+id/dropDownRazon"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/crdImage" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/dropDownEstatus"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    app:boxStrokeColor="@animator/selector"
-                    app:layout_constraintEnd_toStartOf="@+id/space"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView6">
-
-                    <AutoCompleteTextView
-                        android:id="@+id/autoCompleteEstatus"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:enabled="false"
-                        android:hint="@string/estatus" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <TextView
-                    android:id="@+id/textView7"
-                    style="@style/text_style_subsubtitle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/raz_n"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/crdImage" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/dropDownRazon"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    app:boxStrokeColor="@animator/selector"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/space"
-                    app:layout_constraintTop_toBottomOf="@+id/textView6">
-
-                    <AutoCompleteTextView
-                        android:id="@+id/autoCompleteRazon"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:enabled="false"
-                        android:hint="@string/raz_n" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <Space
-                    android:id="@+id/space"
-                    android:layout_width="32dp"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-                <TextView
-                    android:id="@+id/textView8"
-                    style="@style/text_style_subsubtitle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/coordenadas"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dropDownEstatus" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtXCordLayout"
-                    style="@style/generic_input_style"
-                    android:layout_width="0dp"
-                    android:enabled="false"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/x"
-                    app:boxCornerRadiusBottomEnd="5dp"
-                    app:boxCornerRadiusBottomStart="5dp"
-                    app:boxCornerRadiusTopEnd="5dp"
-                    app:boxCornerRadiusTopStart="5dp"
-                    app:boxStrokeColor="@animator/selector"
-                    app:boxStrokeWidth="2dp"
-                    app:layout_constraintEnd_toStartOf="@+id/space2"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView8">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/txtXCord"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="number" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <Space
-                    android:id="@+id/space2"
-                    android:layout_width="32dp"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtYCordLayout"
-                    style="@style/generic_input_style"
-                    android:layout_width="0dp"
-                    android:enabled="false"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/y"
-                    app:boxCornerRadiusBottomEnd="5dp"
-                    app:boxCornerRadiusBottomStart="5dp"
-                    app:boxCornerRadiusTopEnd="5dp"
-                    app:boxCornerRadiusTopStart="5dp"
-                    app:boxStrokeColor="@animator/selector"
-                    app:boxStrokeWidth="2dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/space2"
-                    app:layout_constraintTop_toBottomOf="@+id/textView8">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/txtYCord"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="number" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <TextView
-                    android:id="@+id/textView9"
-                    style="@style/text_style_subsubtitle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/fecha_y_hora_de_la_visita"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txtXCordLayout" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtFechaLayout"
-                    style="@style/generic_input_style"
-                    android:layout_width="0dp"
-                    android:enabled="false"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/fecha_de_la_visita"
-                    app:boxCornerRadiusBottomEnd="5dp"
-                    app:boxCornerRadiusBottomStart="5dp"
-                    app:boxCornerRadiusTopEnd="5dp"
-                    app:boxCornerRadiusTopStart="5dp"
-                    app:boxStrokeColor="@animator/selector"
-                    app:boxStrokeWidth="2dp"
-                    app:layout_constraintEnd_toStartOf="@+id/space3"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView9">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/txtFecha"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="number" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <Space
-                    android:id="@+id/space3"
-                    android:layout_width="32dp"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView9"
-                    app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtHoraLayout"
-                    style="@style/generic_input_style"
-                    android:layout_width="0dp"
-                    android:enabled="false"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/hora"
-                    app:boxCornerRadiusBottomEnd="5dp"
-                    app:boxCornerRadiusBottomStart="5dp"
-                    app:boxCornerRadiusTopEnd="5dp"
-                    app:boxCornerRadiusTopStart="5dp"
-                    app:boxStrokeColor="@animator/selector"
-                    app:boxStrokeWidth="2dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/space3"
-                    app:layout_constraintTop_toBottomOf="@+id/textView9">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/txtHora"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="number" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <TextView
-                    android:id="@+id/textView10"
-                    style="@style/text_style_subsubtitle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/nombre_del_visitador"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txtFechaLayout" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtVisitadorLayout"
-                    style="@style/generic_input_style"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/nombre_del_visitador"
-                    app:boxCornerRadiusBottomEnd="5dp"
-                    app:boxCornerRadiusBottomStart="5dp"
-                    app:boxCornerRadiusTopEnd="5dp"
-                    app:boxCornerRadiusTopStart="5dp"
-                    app:boxStrokeColor="@animator/selector"
-                    app:boxStrokeWidth="2dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView10">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/txtVisitador"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textPersonName" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <TextView
-                    android:id="@+id/textView11"
-                    style="@style/text_style_subsubtitle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/fotografia_de_la_vivienda"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txtVisitadorLayout" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtPhotoLayout"
-                    style="@style/generic_input_style"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/jpg_png_jpeg"
-                    app:boxCornerRadiusBottomEnd="5dp"
-                    app:boxCornerRadiusBottomStart="5dp"
-                    app:boxCornerRadiusTopEnd="5dp"
-                    android:enabled="false"
-                    app:boxCornerRadiusTopStart="5dp"
-                    app:boxStrokeColor="@animator/selector"
-                    app:boxStrokeWidth="2dp"
-                    app:layout_constraintEnd_toEndOf="@+id/textView11"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView11">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/txtPhoto"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="number" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <ImageButton
-                    android:id="@+id/btnGallery"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:backgroundTint="@color/primary"
-                    android:src="@drawable/round_add_photo_alternate_24"
-                    app:layout_constraintBottom_toBottomOf="@+id/txtPhotoLayout"
-                    app:layout_constraintStart_toEndOf="@+id/txtPhotoLayout"
-                    app:layout_constraintTop_toTopOf="@+id/txtPhotoLayout" />
-
-                <ImageButton
-                    android:id="@+id/btnPhoto"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:backgroundTint="@color/primary"
-                    android:src="@drawable/round_add_a_photo_24"
-                    app:layout_constraintBottom_toBottomOf="@+id/txtPhotoLayout"
-                    app:layout_constraintStart_toEndOf="@+id/btnGallery"
-                    app:layout_constraintTop_toTopOf="@+id/txtPhotoLayout" />
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/materialCardView2"
-                    android:layout_width="0dp"
-                    android:layout_height="160dp"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txtPhotoLayout" >
-
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="wrap_content">
 
-                        <ImageView
-                            android:id="@+id/imageView2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                        <ImageButton
+                            android:id="@+id/imageButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/round_add_a_photo_24" />
+                            app:srcCompat="@drawable/baseline_chevron_left_24" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            style="@style/text_style_subtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/visita"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/imageButton"
+                            app:layout_constraintTop_toTopOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
 
-                </com.google.android.material.card.MaterialCardView>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp">
 
-                <TextView
-                    android:id="@+id/textView12"
-                    style="@style/text_style_subsubtitle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/el_cliente_es_el_mismo_que_el_solicitante"
-                    app:layout_constraintBottom_toBottomOf="@+id/switchMaterial"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/switchMaterial" />
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/crdImage"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        app:cardCornerRadius="50dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
 
-                <com.google.android.material.switchmaterial.SwitchMaterial
-                    android:id="@+id/switchMaterial"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintStart_toEndOf="@+id/textView12"
-                    app:layout_constraintTop_toBottomOf="@+id/materialCardView2"
-                    app:thumbTint="@color/white"
-                    app:trackTint="@color/primary" />
+                        <ImageView
+                            android:id="@+id/imgUsuarioLista"
+                            android:layout_width="match_parent"
 
-                <Button
-                    android:id="@+id/btnSave"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:backgroundTint="@color/primary"
-                    android:text="@string/enviar_datos"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/switchMaterial" />
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/fondo" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        style="@style/text_style_subtitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/nombre_del_chango"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/crdImage"
+                        app:layout_constraintTop_toTopOf="@+id/crdImage" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        style="@style/text_style_subsubtitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/universidad_del_chango"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/crdImage"
+                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        style="@style/text_style_subsubtitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/estatus"
+                        app:layout_constraintEnd_toStartOf="@+id/dropDownRazon"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/crdImage" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/dropDownEstatus"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:boxStrokeColor="@animator/selector"
+                        app:layout_constraintEnd_toStartOf="@+id/space"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/autoCompleteEstatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:hint="@string/estatus" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        style="@style/text_style_subsubtitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/raz_n"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/crdImage" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/dropDownRazon"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:boxStrokeColor="@animator/selector"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/space"
+                        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/autoCompleteRazon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:hint="@string/raz_n" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Space
+                        android:id="@+id/space"
+                        android:layout_width="32dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        style="@style/text_style_subsubtitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/coordenadas"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dropDownEstatus" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtXCordLayout"
+                        style="@style/generic_input_style"
+                        android:layout_width="0dp"
+                        android:enabled="false"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/x"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        app:boxStrokeColor="@animator/selector"
+                        app:boxStrokeWidth="2dp"
+                        app:layout_constraintEnd_toStartOf="@+id/space2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtXCord"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Space
+                        android:id="@+id/space2"
+                        android:layout_width="32dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtYCordLayout"
+                        style="@style/generic_input_style"
+                        android:layout_width="0dp"
+                        android:enabled="false"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/y"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        app:boxStrokeColor="@animator/selector"
+                        app:boxStrokeWidth="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/space2"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtYCord"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        style="@style/text_style_subsubtitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/fecha_y_hora_de_la_visita"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtXCordLayout" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtFechaLayout"
+                        style="@style/generic_input_style"
+                        android:layout_width="0dp"
+                        android:enabled="false"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/fecha_de_la_visita"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        app:boxStrokeColor="@animator/selector"
+                        app:boxStrokeWidth="2dp"
+                        app:layout_constraintEnd_toStartOf="@+id/space3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtFecha"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Space
+                        android:id="@+id/space3"
+                        android:layout_width="32dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView9"
+                        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtHoraLayout"
+                        style="@style/generic_input_style"
+                        android:layout_width="0dp"
+                        android:enabled="false"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hora"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        app:boxStrokeColor="@animator/selector"
+                        app:boxStrokeWidth="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/space3"
+                        app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtHora"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        style="@style/text_style_subsubtitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/nombre_del_visitador"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtFechaLayout" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtVisitadorLayout"
+                        style="@style/generic_input_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/nombre_del_visitador"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        app:boxCornerRadiusTopStart="5dp"
+                        app:boxStrokeColor="@animator/selector"
+                        app:boxStrokeWidth="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtVisitador"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        style="@style/text_style_subsubtitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/fotografia_de_la_vivienda"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtVisitadorLayout" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtPhotoLayout"
+                        style="@style/generic_input_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/jpg_png_jpeg"
+                        app:boxCornerRadiusBottomEnd="5dp"
+                        app:boxCornerRadiusBottomStart="5dp"
+                        app:boxCornerRadiusTopEnd="5dp"
+                        android:enabled="false"
+                        app:boxCornerRadiusTopStart="5dp"
+                        app:boxStrokeColor="@animator/selector"
+                        app:boxStrokeWidth="2dp"
+                        app:layout_constraintEnd_toEndOf="@+id/textView11"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtPhoto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageButton
+                        android:id="@+id/btnGallery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:backgroundTint="@color/primary"
+                        android:src="@drawable/round_add_a_photo_24"
+                        app:tint="@color/white"
+                        app:layout_constraintBottom_toBottomOf="@+id/txtPhotoLayout"
+                        app:layout_constraintStart_toEndOf="@+id/txtPhotoLayout"
+                        app:layout_constraintTop_toTopOf="@+id/txtPhotoLayout" />
+
+                    <ImageButton
+                        android:id="@+id/btnPhoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:backgroundTint="@color/primary"
+                        app:tint="@color/white"
+                        android:src="@drawable/round_add_photo_alternate_24"
+                        app:layout_constraintBottom_toBottomOf="@+id/txtPhotoLayout"
+                        app:layout_constraintStart_toEndOf="@+id/btnGallery"
+                        app:layout_constraintTop_toTopOf="@+id/txtPhotoLayout" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/materialCardView2"
+                        android:layout_width="0dp"
+                        android:layout_height="240dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtPhotoLayout">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/photoImage"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/round_add_a_photo_24" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        style="@style/text_style_subsubtitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/el_cliente_es_el_mismo_que_el_solicitante"
+                        app:layout_constraintBottom_toBottomOf="@+id/switchMaterial"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/switchMaterial" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchMaterial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintStart_toEndOf="@+id/textView12"
+                        app:layout_constraintTop_toBottomOf="@+id/materialCardView2"
+                        app:thumbTint="@color/white"
+                        app:trackTint="@color/primary" />
+
+                    <Button
+                        android:id="@+id/btnSave"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:backgroundTint="@color/primary"
+                        android:text="@string/enviar_datos"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/switchMaterial" />
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </LinearLayout>
-    </ScrollView>
+            </LinearLayout>
+        </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

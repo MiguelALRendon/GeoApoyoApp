@@ -13,16 +13,20 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.geoapoyo.EditUserActivity;
+import com.example.geoapoyo.Models.C_candidato;
 import com.example.geoapoyo.R;
+import com.google.android.material.card.MaterialCardView;
+import com.squareup.picasso.Picasso;
 
-import org.w3c.dom.Text;
+import java.util.List;
 
 public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.ViewHolder> {
     private final Context context;
-    //Falta la lista de Usuarios, esta se agrega al constructor
+    private final List<C_candidato> candidatos;
 
-    public UsuarioAdapter(Context context) {
+    public UsuarioAdapter(Context context, List<C_candidato> candidatos) {
         this.context = context;
+        this.candidatos = candidatos;
     }
 
     @NonNull
@@ -34,10 +38,16 @@ public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull UsuarioAdapter.ViewHolder holder, int position) {
+        C_candidato candidato = candidatos.get(position);
+        String imageURL = "https://prototipo2023-d6240700184c.herokuapp.com/api/uploads/candidatos/" + candidato.id_candidato;
+        holder.txtNombreUsuario.setText(candidato.nombre);
+        holder.txtUniversidad.setText(candidato.institucion);
+        Picasso.get().load(imageURL).into(holder.imgUsuario);
         holder.btnDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, EditUserActivity.class);
+                intent.putExtra("Candidato", candidato);
                 context.startActivity(intent);
             }
         });
@@ -46,13 +56,14 @@ public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-        return 6;
+        return candidatos.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView txtNombreUsuario;
         TextView txtUniversidad;
         ImageView imgUsuario;
+        MaterialCardView crdActive;
         ImageButton btnDetails;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -61,6 +72,7 @@ public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.ViewHold
             txtUniversidad = itemView.findViewById(R.id.txtUniversidadLista);
             imgUsuario = itemView.findViewById(R.id.imgUsuarioLista);
             btnDetails = itemView.findViewById(R.id.btnDetailLista);
+            crdActive = itemView.findViewById(R.id.crdActive);
         }
     }
 }

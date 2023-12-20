@@ -5,5 +5,5 @@ import com.example.geoapoyo.Models.C_candidato;
 import java.util.List;
 
 public class R_Candidatos {
-    public List<C_candidato> Candidato;
+    public List<C_candidato> candidatos;
 }
